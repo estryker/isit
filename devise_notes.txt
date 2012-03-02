@@ -1,0 +1,46 @@
+[DEVISE] Devise.case_insensitive_keys is false which is no longer supported. Recent Devise versions automatically downcase the e-mail before saving it to the database but your app isn't using this feature. You can solve this issue by either:
+
+1) Setting config.case_insensitive_keys = [:email] in your Devise initializer and running a migration that will downcase all emails already in the database;
+
+2) Setting config.case_insensitive_keys = [] (so nothing will be downcased) and making sure you are not using Devise :validatable (since validatable assumes caseinsensitivity)
+
+
+[DEVISE] Devise.use_salt_as_remember_token is false which is no longer supported. Devise now only uses the salt as remember token and the remember_token column can be removed from your models.
+
+
+[DEVISE] Devise.reset_password_within is nil. Please set this value to an interval (for example, 6.hours) and add a reset_password_sent_at field to your Devise models (if they don't have one already).
+
+      create  config/initializers/devise.rb
+      create  config/locales/devise.en.yml
+===============================================================================
+
+Some setup you must do manually if you haven't yet:
+
+  1. Ensure you have defined default url options in your environments files. Here 
+     is an example of default_url_options appropriate for a development environment 
+     in config/environments/development.rb:
+
+       config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+     In production, :host should be set to the actual host of your application.
+
+  2. Ensure you have defined root_url to *something* in your config/routes.rb.
+     For example:
+
+       root :to => "home#index"
+
+  3. Ensure you have flash messages in app/views/layouts/application.html.erb.
+     For example:
+
+       <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+
+  4. If you are deploying Rails 3.1 on Heroku, you may want to set:
+
+       config.assets.initialize_on_precompile = false
+
+     On config/application.rb forcing your application to not access the DB
+     or load models when precompiling your assets.
+
+===============================================================================
+
