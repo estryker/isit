@@ -9,8 +9,12 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
+
 module Istherea
   class Application < Rails::Application
+
+    require 'oauth/rack/oauth_filter'
+    config.middleware.use(OAuth::Rack::OAuthFilter)
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.

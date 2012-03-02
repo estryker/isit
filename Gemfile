@@ -18,7 +18,7 @@ end
 gem 'devise'
 gem "oauth-plugin", ">= 0.4.0.pre1"
 
-#gem 'jquery-rails'
+gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
