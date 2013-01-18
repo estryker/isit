@@ -1,0 +1,21 @@
+<header>
+  <nav class="round">   
+    <ul>
+      <li> <h1>Istherea </h1> </li>   
+      <li> </li>
+      <li>
+        <%= link_to "Home", welcome_index_path %>
+      </li>
+      <% if signed_in? %>
+      <li>
+        <%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
+      </li>
+      <% else %>  
+      <li>
+        <%= link_to "Logins", new_user_session_path %>
+      </li>
+      <% end %>
+    </ul> 
+  </nav>
+ <%= yield :head %>
+</header>

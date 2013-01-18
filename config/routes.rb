@@ -1,4 +1,6 @@
 Istherea::Application.routes.draw do
+  get "users/show"
+
   get "user/show"
 
   resources :oauth_clients
