@@ -1,4 +1,6 @@
 Istherea::Application.routes.draw do
+  get "user/show"
+
   resources :oauth_clients
 
   match '/oauth/test_request',  :to => 'oauth#test_request',  :as => :test_request
@@ -14,8 +16,12 @@ Istherea::Application.routes.draw do
   match '/oauth',               :to => 'oauth#index',         :as => :oauth
 
   get "welcome/index"
-
-  devise_for :users
+  
+  # , :controllers => { :registrations => :registrations } 
+  devise_for :users do 
+    get 'users', :to => 'users#show', :as => :user_path # Rails 3
+  end
+  
   root :to => "welcome#index"
   
   post 'oauth/revoke'
