@@ -48,7 +48,12 @@ class Oauth2Verifier < OauthToken
 
   def generate_keys
     self.token = OAuth::Helper.generate_key(20)[0,20]
+    #self.expires_at = 10.minutes.from_now
+    # WARNING: the official gem changed the 'valid_to' field to 'expires_at'
+    #  t.timestamp :authorized_at, :invalidated_at, :valid_to
+    # But I don't want to change the database at this point. 
     self.expires_at = 10.minutes.from_now
+    # self.valid_to = 10.minutes.from_now
     self.authorized_at = Time.now
   end
 

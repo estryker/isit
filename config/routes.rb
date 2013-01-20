@@ -20,9 +20,13 @@ Istherea::Application.routes.draw do
   get "welcome/index"
   
   # , :controllers => { :registrations => :registrations } 
-  devise_for :users do 
-    get 'users', :to => 'users#show', :as => :user_path # Rails 3
-  end
+  devise_for :users 
+
+  match '/users/:id', :to => 'users#show', :as => :user
+  
+  #authenticated :user do
+  #  root :to => "users#show"
+  #end
   
   root :to => "welcome#index"
   

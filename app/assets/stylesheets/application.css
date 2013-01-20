@@ -5,6 +5,72 @@
  *= require_self
  *= require_tree . 
 */
+.container {
+  /*width: 95%;*/
+ width:950px;
+  /*position:relative;*/ 
+  margin-left:auto;
+margin-right:auto;
+}
+
+
+body {
+  text-align: left;
+  /*background: #006E72;*/
+  /*background: #FF9602;*/ 
+  background: #A0A0A0;
+}
+
+header {
+  padding-top: 10px;
+}
+
+header h1 {
+  font-size: 200%;
+  /*color: #006E72;*/
+  color: #FF9602;
+}
+header img {
+  padding: 1em;
+  background: #fff;
+}
+
+section {
+  margin-top: 1em;
+  font-size: 120%;
+  padding: 20px;
+  background: #fff;
+  /*position:absolute;*/
+}
+
+section h1 {
+  font-size: 200%;
+  /* color: #006E72; */
+  color: #FF9602;
+}
+section h2 {
+  font-size: 150%;
+  /* color: #006E72; */
+  color: #FF9602;
+}
+/* Links */
+
+a {
+  /*color: #006E72;*/
+  color: #808080;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #c0c0c0;
+  text-decoration: underline;
+}
+
+a:visited {
+        color: #A0A0A0;
+  /*color: #006E72;*/
+}
+
 /* Navigation */
 
 nav {
@@ -45,4 +111,84 @@ nav ul li a:visited {
 nav ul li a:hover {
   text-decoration: underline;
   color: #c0c0c0;
+}
+.profile img.gravatar {
+  border: 1px solid #999;
+  margin-bottom: -15px;
+}
+/* Round corners */
+
+/*
+.round {
+  -moz-border-radius:    10px;
+  -webkit-border-radius: 10px;
+  border-radius:         10px;
+}
+*/
+
+footer {
+  text-align: center;
+  margin-top: 10px;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer nav {
+  float: none;
+}
+/* Sign up button */
+
+a.large_button {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  text-align: left;
+  width: 190px;
+  color: #fff;
+  /* background: #006400;*/
+  background: #FF9602;
+  font-size: 150%;
+  font-weight: bold;
+  padding: 20px;
+}
+.field_with_errors {
+  margin-top: 10px;
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+.field_with_errors label {
+  color: #fff;
+}
+
+#error_explanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#error_explanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
 }

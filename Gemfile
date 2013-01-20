@@ -36,3 +36,5 @@ group :test do
   # Pretty printed test output
   gem 'turn', :require => false
 end
+
+gem 'gravatar_image_tag', '1.0.0.pre2'
