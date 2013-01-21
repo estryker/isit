@@ -13,7 +13,7 @@
 #  scope                 :string(255)
 #  authorized_at         :datetime
 #  invalidated_at        :datetime
-#  valid_to              :datetime
+#  expires_at            :datetime
 #  created_at            :datetime
 #  updated_at            :datetime
 #

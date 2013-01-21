@@ -3,6 +3,8 @@ Istherea::Application.routes.draw do
 
   get "user/show"
 
+  get "me", :to => 'oauth#me'
+
   resources :oauth_clients
 
   match '/oauth/test_request',  :to => 'oauth#test_request',  :as => :test_request

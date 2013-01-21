@@ -1,0 +1,4 @@
+class AddNamesToUser < ActiveRecord::Migration
+  def change
+  end
+end
