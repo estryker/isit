@@ -22,10 +22,10 @@ Istherea::Application.routes.draw do
   get "welcome/index"
   
   # , :controllers => { :registrations => :registrations } 
-  # devise_for :users 
-  constraints :protocol => "https" do
-    devise_for :users
-  end
+  devise_for :users 
+  #constraints :protocol => "https" do
+  #  devise_for :users
+  #end
   match '/users/:id', :to => 'users#show', :as => :user
   
   #authenticated :user do
