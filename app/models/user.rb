@@ -17,6 +17,9 @@
 #  updated_at             :datetime
 #  first_name             :string(255)
 #  last_name              :string(255)
+#  confirmed_at           :datetime
+#  confirmation_token     :string(255)
+#  confirmation_sent_at   :datetime
 #
 
 class User < ActiveRecord::Base
@@ -33,5 +36,5 @@ class User < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   # The devise controller uses these to set attributes, so add them here as the model grows
-  attr_accessible :first_name, :last_name, :email, :password, :password_confirmation, :remember_me
+  attr_accessible :first_name, :last_name, :email, :password, :password_confirmation, :remember_me,:unconfirmed_email
 end
