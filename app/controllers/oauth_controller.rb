@@ -13,7 +13,7 @@ class OauthController < ApplicationController
     # This allows /me to be called if there is a 'current_user' (from web page session) 
     # or if there 'current_token' (from an oauth token)
     u = current_user || current_token.user
-    $stderr.puts u.inspect
+    $stderr.puts "finding me: ", u.inspect
     json = {}.to_json
 
     unless u.nil?
