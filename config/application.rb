@@ -8,9 +8,16 @@ if defined?(Bundler)
   # If you want your assets lazily compiled in production, use this line
   # Bundler.require(:default, :assets, Rails.env)
 end
-
+ActionMailer::Base.smtp_settings = {
+  :address  => "smtp.mandrillapp.com",
+  :port  => 25,
+  :user_name  => "app11204151@heroku.com",
+  :password  => "nqUDN-wSNJ55eMtPL7CC5Q",
+  :authentication  => :login
+}
 
 module Istherea
+
   class Application < Rails::Application
 
     require 'oauth/rack/oauth_filter'

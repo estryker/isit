@@ -60,11 +60,5 @@ Istherea::Application.configure do
 
   config.action_mailer.delivery_method = :smtp
 
-  ActionMailer::Base.smtp_settings = {
-    :address  => "smtp.mandrillapp.com",
-    :port  => 25,
-    :user_name  => "app11204151@heroku.com",
-    :password  => "nqUDN-wSNJ55eMtPL7CC5Q",
-    :authentication  => :login
-  }
+  config.action_mailer.default_url_options = { :host => 'istherea.herokuapp.com' }
 end
