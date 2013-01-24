@@ -27,7 +27,7 @@ class OauthController < ApplicationController
         "email" => u.email
       }.to_json
     end
-
+    $stderr.puts "Json: ",json.inspect
     render :json => json
   end
 
