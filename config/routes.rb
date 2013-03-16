@@ -27,7 +27,8 @@ Istherea::Application.routes.draw do
   #  devise_for :users
   #end
   match '/users/:id', :to => 'users#show', :as => :user
-  
+
+  # match 'users#show'
   #authenticated :user do
   #  root :to => "users#show"
   #end
