@@ -1,27 +1,10 @@
-<header>
-  <nav class="round">   
-    <ul>
-      <li> <h1>Istherea </h1> </li>   
-      <li> </li>
-      <li>
-        <%= link_to "Home", welcome_index_path %>
-      </li>
-      <% if signed_in? %> 
-      <li>
-        <%= link_to "Dev", oauth_clients_path %>
-      </li> 
-      <li>
-        <%= link_to "Profile", current_user %>
-      </li> 
-        <li>
-        <%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
-      </li>
-      <% else %>  
-      <li>
-        <%= link_to "Login", new_user_session_path %>
-      </li>
-      <% end %>
-    </ul> 
-  </nav>
- <%= yield :head %>
-</header>
+
+<div class="HeadBlock">
+  <h1>Istherea</h1>
+</div>
+
+<div class="bText">
+
+
+</div>
+
