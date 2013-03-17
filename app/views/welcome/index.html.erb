@@ -1,23 +1,20 @@
-<div class="grid_22">
-  <div class="Text">
-    <h1>Welcome</h1>
-    <p>Istherea. Intersecting people, place & time. </p>
-    <% if signed_in? %>
-    <div >
-      <%= button_to "Profile", current_user,:class=>'btn' %> 
-    </div >
+<h1>Welcome</h1>
+<p>Istherea. Intersecting people, place & time. </p>
+<% if signed_in? %>
+<div >
+  <%= button_to "Profile", current_user,:class=>'btn' %> 
+</div >
 
-    <% else %>
-    <h2> Already have an account? <h2>
-	<div >
-	  <%= button_to "Sign in", new_user_session_path, :class => 'btn' %>
-	</div>
-	
-	<h2> Need one?  </h2>
-	<div >
-	  <%= button_to "Sign up", new_user_registration_path, :class => 'btn' %>
-	</div>
-	
-	<% end %>
-  </div>
+<% else %>
+<h2> Already have an account? </h2>
+<div >
+  <%= button_to "Sign in", new_user_session_path, :class => 'btn', :method => 'get' %>
 </div>
+
+<h2> Need one?  </h2>
+<div >
+  <%= button_to "Sign up", new_user_registration_path, :class => 'btn', :method => 'get'  %>
+</div>
+
+<% end %>
+    

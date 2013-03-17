@@ -1,9 +1,5 @@
-<div class="grid_22">
-  <div class="Text">
-    <h1>
-      <%= gravatar_for @user %>
-    </h1>
-    
-    <%= button_to 'Update details', edit_user_registration_path, :class=>'btn' %>
-  </div>
-</div>
+<h1>
+  <%= gravatar_for @user %>
+</h1>
+
+<%= button_to 'Update details', edit_user_registration_path, :class=>'btn', :method=> 'get' %>
