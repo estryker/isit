@@ -1,17 +1,20 @@
 <h1>Welcome</h1>
-<p>Istherea. Intersecting people, place & time. </p>
+<div>
+&nbsp;
+
+</div>
 <% if signed_in? %>
 <div >
   <%= button_to "Profile", current_user,:class=>'btn' %> 
 </div >
 
 <% else %>
-<h2> Already have an account? </h2>
+<h2> Already have an Istherea account? </h2>
 <div >
   <%= button_to "Sign in", new_user_session_path, :class => 'btn', :method => 'get' %>
 </div>
 
-<h2> Need one?  </h2>
+<h2> Want one?  </h2>
 <div >
   <%= button_to "Sign up", new_user_registration_path, :class => 'btn', :method => 'get'  %>
 </div>

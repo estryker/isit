@@ -1,44 +1,39 @@
-<div class="grid_22">
-
-  <div class="Text">
     <h1> You need to Sign up to continue </h1>
     
     <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
     <%= devise_error_messages! %>
     
-    <div class="line">
-      <span style="color:#FF0000">*</span>
-      <%= f.label :first_name %> 
+    <div class="field">
+      
+      <%= f.label :first_name, 'First name*' %> 
       <%= f.text_field :first_name, {:autofocus => true ,:placeholder => 'First Name',:class => "input_text", :size => 32, :tabindex => 5 }%>
     </div>
     
-    <div class="line"> 
+    <div class="field"> 
       <%= f.label :last_name %>
       <%= f.text_field :last_name, :autofocus => true ,:placeholder => 'Last Name',:class => "input_text", :size => 32, :tabindex => 5 %>
     </div>
    
-    <div class="line"> 
-      <span style="color:#FF0000">*</span>
-      <%= f.label :email %>
+    <div class="field"> 
+      
+      <%= f.label :email, "Email*" %>
       <%= f.email_field :email, :autofocus => true ,:placeholder => 'Email',:class=> "input_text", :size => 32 ,:tabindex => 5 %>
     </div>
     
-    <div class="line">
-      <span style="color:#FF0000">*</span>
-      <%= f.label :password %>
+    <div class="field">
+      <%= f.label :password, "Password*" %>
       <%= f.password_field :password,:class=> "input_text", :size => 32 ,:tabindex => 5 %>
     </div>
     
-    <div class="line">
-      <span style="color:#FF0000">*</span>
-     <%= f.label :password_confirmation %>
+    <div class="field">
+      <%= f.label :password_confirmation, "Password confirmation*" %>
       <%= f.password_field :password_confirmation,:class=> "input_text", :size => 32 ,:tabindex => 5 %>
     </div>
  
     <label>
       &nbsp;
     </label>
-    <div class="line">
+    <div class="field">
       <%= f.submit "Sign up",  :class => "btn", :tabindex => 12  %>
     </div>
     <% end %>
@@ -49,4 +44,4 @@
   <div class="grid_1 alpha">
     &nbsp;
   </div> 
-</div>
+
