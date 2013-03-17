@@ -6,9 +6,11 @@
   <%= hidden_field_tag "oauth_callback", params[:oauth_callback] %>
 <%- end -%>
 <p>
-  <%= check_box_tag 'authorize',:size=>'40' %> authorize access
+  <%= check_box_tag 'authorize',:size=>'50' %> authorize access
 </p>
 <p>
-  <%= submit_tag, :class => 'btn' %>
+  <div class="field">
+    <%= submit_tag, :class => 'btn' %>
+  </div>
 </p>
 <% end %>
