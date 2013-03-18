@@ -9,7 +9,7 @@
 <%= hidden_field_tag "scope", params[:scope]%>
 
 <p>
-  <%= check_box_tag 'authorize',:size=>'40'  %> authorize access
+  <%= check_box_tag 'authorize',:class => 'btn'  %> authorize access
 </p>
 <p>
   <%= submit_tag "Submit", :class => 'btn'  %>
