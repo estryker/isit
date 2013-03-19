@@ -1,4 +1,4 @@
-<h1> You need to Sign in to continue </h1>
+<h1> Sign in to Istherea  </h1>
 
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
 <%= devise_error_messages! %>
@@ -21,6 +21,14 @@
 </div>
 <% end %>
 
+<div class="grid_1 alpha">
+&nbsp;
+</div>
+<p>&nbsp;</p>
+<h2> Want an account?  </h2>
+<div >
+  <%= button_to "Sign up", new_user_registration_path, :class => 'btn', :method => 'get'  %>
+</div>
 </div>
 
 <div class="grid_1 alpha">

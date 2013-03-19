@@ -1,21 +1,6 @@
 <footer>
  <div class="disclaimer">
-Copyright © 2013 istherea Ltd. All rights reserved.
-
+Copyright © 2013 Istherea Ltd. All rights reserved.
  </div>
- <% if signed_in? %> 
- <nav class="round">   
-   <ul>
-     <li>
-       <%= link_to "Dev", oauth_clients_path %>
-     </li> 
-     <li>
-       <%= link_to "Profile", current_user %>
-     </li> 
-     <li>
-       <%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
-     </li>
-   </ul>
- </nav>
-<% end %>
+
 </footer>

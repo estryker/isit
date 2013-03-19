@@ -6,13 +6,12 @@
  *= require_tree . 
 */
 body {
-	
-	height:100%;
-	width:100%;
-	font-family:Verdana, Geneva, sans-serif;
-	background:#333 url(bannerb.png) repeat top center fixed;
-	margin:0;
-	padding:0;
+    height:100%;
+    width:100%;
+    font-family:Verdana, Geneva, sans-serif;
+    background:#333 url(bannerb.png) no-repeat center bottom fixed; -webkit-background-size: cover;
+    margin:0;
+    padding:0;
 }
 
 
@@ -106,7 +105,7 @@ font-style:italic
 	margin-right:80px;
 	color:#FFF;	
 	text-align:right;
-	font-size:11px;
+	font-size:20px;
 	
 }
 
@@ -209,6 +208,24 @@ font-style:italic
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
+.flash {
+    font-size:32px;	
+    }
+
+#.flash.error .flash.alert{
+    border: thin solid #8b0000;
+    background: #ffc0cb;
+}
+
+#.flash.notice, .flash.info {
+    border: thin solid #ff0;
+    background: #ffe;
+}
+
+#.flash.warning {
+    border: thin solid #b8860b;
+    background: #ff0;
+}
 
 nav {
   float: inherit;
