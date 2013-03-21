@@ -1,4 +1,4 @@
-<h1> Sign in to Istherea  </h1>
+<h1> Log in to this app by istherea Ltd  </h1>
 
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
 <%= devise_error_messages! %>
@@ -16,6 +16,7 @@
 <label>
   &nbsp;
 </label>
+
 <div class="field">
   <%= f.submit "Sign in",  :class => "btn", :tabindex => 12  %>
 </div>
@@ -26,11 +27,15 @@
 </div>
 <p>&nbsp;</p>
 <h2> Want an account?  </h2>
-<div >
+<div class="buttonHolder">
   <%= button_to "Sign up", new_user_registration_path, :class => 'btn', :method => 'get'  %>
 </div>
-</div>
+
 
 <div class="grid_1 alpha">
   &nbsp;
 </div> 
+<div class="grid_1 alpha">
+  &nbsp;
+</div> 
+<h4> This app is by istherea Ltd.  You can use your log in for all apps published by istherea. </h4>

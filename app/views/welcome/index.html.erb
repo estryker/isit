@@ -15,15 +15,19 @@
    <%= button_to "Sign Out", destroy_user_session_path, {:method => :delete , :class=>'btn'} %>
 </div >
 <% else %>
-<h2> Already have an Istherea account? </h2>
-<div >
+<h2> Already have an istherea account? </h2>
+<div class="buttonHolder">
   <%= button_to "Sign in", new_user_session_path, :class => 'btn', :method => 'get' %>
 </div>
 
 <h2> Want one?  </h2>
-<div >
+<div class="buttonHolder">
   <%= button_to "Sign up", new_user_registration_path, :class => 'btn', :method => 'get'  %>
 </div>
 
 <% end %>
     
+<div class="grid_1 alpha">
+  &nbsp;
+</div> 
+<h4> This app is by istherea Ltd.  You can use your log in for all apps published by istherea. </h4>

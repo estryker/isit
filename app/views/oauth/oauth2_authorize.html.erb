@@ -1,4 +1,4 @@
-<h2>Would you like to allow <%= link_to @client_application.name,@client_application.url %> to access your Istherea account? </h3>
+<h2>Would you like to allow @client_application.name to access your istherea account? </h3>
 <%= form_tag authorize_url do %>
 <%= hidden_field_tag "response_type", params[:response_type]%>
 <%= hidden_field_tag "client_id", params[:client_id]%>
@@ -8,11 +8,13 @@
 
 <p>
   <h2>
-    <%= check_box_tag 'authorize' %> allow access
+    <%= check_box_tag 'authorize' %> Allow access
   </h2>
 </p>
 <p>
-  <%= submit_tag 'Save changes', :class=>'btn' %>
+  <div class="buttonHolder">
+    <%= submit_tag 'Save changes', :class=>'btn' %>
+  </div>
 </p>
 <% end %>
 

@@ -171,12 +171,16 @@ font-style:italic
         height:90px;
     }
 
+buttonHolder{ 
+    *text-align: center; 
+}
+
 .btn {
   display: inline-block;
   # display: inline;
   padding: 14px;
   margin-bottom: 0;
-  margin-left: 300px;
+  margin-left: 200px;
   font-size: 70px;
   line-height: 70px;
   color: #333333;
