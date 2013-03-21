@@ -172,7 +172,7 @@ font-style:italic
     }
 
 buttonHolder{ 
-    *text-align: center; 
+    text-align: center; 
 }
 
 .btn {
