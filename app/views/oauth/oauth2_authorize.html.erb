@@ -1,4 +1,4 @@
-<h2>Would you like to allow <%= @client_application.name to access your istherea account? %> </h3>
+<h2>Would you like to allow <%= @client_application.name %> to access your istherea account? </h3>
 <%= form_tag authorize_url do %>
 <%= hidden_field_tag "response_type", params[:response_type]%>
 <%= hidden_field_tag "client_id", params[:client_id]%>
