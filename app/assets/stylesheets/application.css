@@ -180,7 +180,7 @@ font-style:italic
 .btn {
   display: inline-block;
   #display: inline;	
-  width:300px;
+  #width:300px;
   text-align:center;
   padding: 14px;
    margin:0 auto;
@@ -219,7 +219,7 @@ font-style:italic
 .btn:hover {
   display: inline-block;
   # display: inline;
-  width:300px;
+  #width:300px;
   text-align:center;
   padding: 14px;
    margin:0 auto;

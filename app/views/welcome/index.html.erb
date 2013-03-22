@@ -4,14 +4,14 @@
 
 </div>
 <% if signed_in? %>
-<div >
+<div class="buttonHolder">
   <%= button_to "Profile", current_user,:class=>'btn' %> 
 </div >
 <div>
 &nbsp;
 </div>
 
-<div >
+<div class="buttonHolder">
    <%= button_to "Sign Out", destroy_user_session_path, {:method => :delete , :class=>'btn'} %>
 </div >
 <% else %>
