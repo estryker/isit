@@ -99,6 +99,10 @@ font-style:italic
   
 }
 
+.large {
+    font-size:100px;
+}
+
 .disclaimer {
 
 	margin-top:50px;
@@ -107,7 +111,6 @@ font-style:italic
 	color:#FFF;	
 	text-align:right;
 	font-size:20px;
-	
 }
 
 .bText {
